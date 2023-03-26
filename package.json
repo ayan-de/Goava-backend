@@ -1,0 +1,38 @@
+{
+  "name": "tshirtstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.35.0",
+    "cookie": "^0.5.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.10.3",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.1",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0",
+    "razorpay": "^2.8.6",
+    "stripe": "^11.14.0",
+    "swagger-ui-express": "^4.6.2",
+    "validator": "^13.9.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
