@@ -7,6 +7,7 @@ const passportConfig = require("./passport/passport");
 const passport = require("passport");
 const fileUpload = require("express-fileupload");
 const cookieSession = require("cookie-session");
+const cors = require("cors");
 
 const auth = require("./routes/auth");
 
@@ -23,6 +24,9 @@ app.use(
     keys: ["thisislcotokenkey"], // dotenv
   })
 );
+
+//cors middleware
+app.use(cors());
 
 //regular middleware
 app.use(express.json());
