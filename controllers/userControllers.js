@@ -10,9 +10,10 @@ exports.signup = BigPromise(async(req,res,next) =>{
 
     let result;
 
-    if(!req.files){
-        return next(new CustomError("photo is required for signup",400))
-    }
+    //removing photo required #2
+    // if(!req.files){
+    //     return next(new CustomError("photo is required for signup",400))
+    // }
 
     const {name , email, password} = req.body;
 
@@ -20,7 +21,8 @@ exports.signup = BigPromise(async(req,res,next) =>{
         return next(new CustomError("Name, email and password are required",400));
     }
 
-    let file = req.files.photo;
+    //removing photo required #3
+    // let file = req.files.photo;
 
     if(req.files){
         result = await cloudinary.v2.uploader.upload(file.tempFilePath,{
@@ -42,10 +44,11 @@ exports.signup = BigPromise(async(req,res,next) =>{
         name,
         email,
         password,
-        photo:{
-             id: result.public_id,
-             secure_url: result.secure_url,
-        }
+        //removing photo required #4
+        // photo:{
+        //      id: result.public_id,
+        //      secure_url: result.secure_url,
+        // }
     })
     cookieToken(user, res);
 });

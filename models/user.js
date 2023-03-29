@@ -26,14 +26,15 @@ const userSchema = new  mongoose.Schema({
         type: String,
         default:'user'
     },
+    //removing photo required #1
     photo:{
         id:{
             type: String,
-            required: true
+            required: false
         },
         secure_url: {
             type: String,
-            required: true
+            required: false
         },
     },
     forgotPasswordToken: String,
