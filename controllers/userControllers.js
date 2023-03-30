@@ -50,6 +50,12 @@ exports.signup = BigPromise(async(req,res,next) =>{
         //      secure_url: result.secure_url,
         // }
     })
+    
+
+    res.cookie("jwtToken",user.getJwtToken(),{
+        expires:new Date(Date.now()+259200000),
+        httpOnly:true
+    })
     cookieToken(user, res);
 });
 
