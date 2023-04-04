@@ -173,7 +173,7 @@ exports.passwordReset = BigPromise(async (req, res, next) => {
 
   //send a JSON response OR send Token
 
-  cookieToken(user, res);
+  cookieToken(user, res, "Password Updated");
 });
 
 exports.getLoogedInUserDetails = BigPromise(async (req, res, next) => {
