@@ -21,6 +21,17 @@ exports.signup = BigPromise(async(req,res,next) =>{
         return next(new CustomError("Name, email and password are required",400));
     }
 
+
+    //check the email if exists in the database
+    const finduser = await User.findOne({ email }).select("+password");
+
+    //if the email exists then the user should try logging in
+    if (finduser) {
+        return next(
+          new customError("User already exits try logging in", 400, false)
+        );
+      }
+
     //removing photo required #3
     // let file = req.files.photo;
 
@@ -51,12 +62,7 @@ exports.signup = BigPromise(async(req,res,next) =>{
         // }
     })
     
-
-    // res.cookie("jwtToken",user.getJwtToken(),{
-    //     expires:new Date(Date.now()+259200000),
-    //     httpOnly:true
-    // })
-    cookieToken(user, res);
+    cookieToken(user, res, "Registration Successfull");
 });
 
 exports.login = BigPromise(async(req, res, next) => {
