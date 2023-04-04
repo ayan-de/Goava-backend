@@ -88,7 +88,7 @@ exports.login = BigPromise(async(req, res, next) => {
     }
 
     //if all goes good send the token
-    cookieToken(user, res);
+    cookieToken(user, res, `Welcome back,${user.name}`);
 
     
 })
