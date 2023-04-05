@@ -8,7 +8,7 @@ const passport = require("passport");
 const fileUpload = require("express-fileupload");
 const cookieSession = require("cookie-session");
 const cors = require("cors");
-
+const errorMiddleware = require('./middlewares/Error')
 const auth = require("./routes/auth");
 
 //for swagger documentation
@@ -53,6 +53,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+
 //morgan middleware
 app.use(morgan("tiny"));
 
@@ -73,6 +74,8 @@ app.use("/auth", auth);
 app.get("/signuptest", (req, res) => {
   res.render("signupform");
 });
+
+app.use(errorMiddleware)
 
 //export app js
 module.exports = app;
