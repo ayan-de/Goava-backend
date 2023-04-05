@@ -26,7 +26,7 @@ exports.signup = BigPromise(async (req, res, next) => {
   //if the email exists then the user should try logging in
   if (finduser) {
     return next(
-      new customError("User already exits try logging in", 400, false)
+      new CustomError("User already exits try logging in", 400, false)
     );
   }
 
