@@ -59,7 +59,14 @@ exports.signup = BigPromise(async (req, res, next) => {
     // }
   });
 
-  cookieToken(user, res, "Registration Successfull");
+  res
+    .status(200)
+    .json({
+      success: true,
+      message: "SignUp Success",
+    });
+
+  // cookieToken(user, res, "Registration Successfull");
 });
 
 exports.login = BigPromise(async (req, res, next) => {
