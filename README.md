@@ -2,9 +2,8 @@
 
 # Portfolio Website
 
-[Visit Website](https://sayande.tech/)
 
-My Portfolio Website made with Reactjs
+Backend of a Ecommerce website
 
 ## 📌 Features 💡
 
@@ -14,16 +13,9 @@ My Portfolio Website made with Reactjs
 
 ## 📌 Technologies used 🛠️
 
-- [ReactJS](https://reactjs.org) - Javascript library
-- [React-Router](https://www.npmjs.com/package/react-router) - Used for Routing
-- [Redux-Toolkit](https://redux-toolkit.js.org/) - Used for State Management specially for Dark Mode
-- [Material UI](https://mui.com/) - Used for Mobile Responsiveness (Grid)
-- [Styled Components](https://styled-components.com/) - Used for writting conditions in CSS
+- [EJS]
+- [Nodejs]
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Used for Styling
-- [SCSS](https://sass-lang.com/) - Used for Styling
-- [React-Icons](https://react-icons.github.io/react-icons/) - Used for Icons
-- [Docker](https://www.docker.com/) - Used for Dockerization
-- [Vercel](https://vercel.com/) - Used for Deployment
 
 ## 📌 Getting Started 🚀
 
@@ -48,10 +40,10 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/sayande2002/My-Portfolio-Website-ReactJs.git
+$ git clone https://github.com/ayan-de/Goava-backend.git
 
 # Go into the repository
-$ cd My-Portfolio-Website-ReactJs
+$ cd tshirtstore
 
 # Remove current origin repository
 $ git remote remove origin
@@ -66,14 +58,14 @@ Using NPM:
 $ npm install
 
 # Start development server
-$ npm start
+$ npm start or nodemon index.js
 ```
 
-Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server.
+Once your server has started, go to this url `http://localhost:4000/` and you will see the website running on a Development Server.
 
 ### 📌 Authors
 
--[Sayan De](https://github.com/sayande2002)
+-[Ayan De](
 
 ### 📌 Contributing
 
@@ -85,6 +77,6 @@ Please feel free to pull requests or log issues.
 
 ### 📌 Contact 📬
 
-For any query, email sayandeten@gmail.com.
+For any query, email deayan252@gmail.com.
 
 Thanks!
