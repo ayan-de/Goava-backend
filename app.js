@@ -17,6 +17,16 @@ const YAML = require("yamljs");
 const swaggerDocument = YAML.load("./swagger.yaml");
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+
+const corsConfig = {
+  credentials: true,
+  origin: "http://localhost:5173",
+  
+};
+
+//cors error handling
+app.use(cors(corsConfig))
+
 //cookie session
 app.use(
   cookieSession({
@@ -26,7 +36,7 @@ app.use(
 );
 
 //cors middleware
-app.use(cors());
+// app.use(cors());
 
 //regular middleware
 app.use(express.json());
