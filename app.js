@@ -20,7 +20,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const corsConfig = {
   credentials: true,
-  origin: "http://localhost:5173",
+  origin: process.env.PORT2,
   
 };
 
