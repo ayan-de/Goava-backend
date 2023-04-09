@@ -19,9 +19,6 @@ router
   .route("/admin/product/add")
   .post(isLoggedIn, customRole("admin"), addProduct);
 
-router
-  .route("/admin/product/add")
-  .post(isLoggedIn, customRole("admin"), addProduct);
 
 router
   .route("/admin/products")
