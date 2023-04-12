@@ -1,9 +1,10 @@
 //base - Product.find()
+//base - Product.find(email:{"deayan252@gmail.com"}, .., ..)
 
 const { base } = require("../models/product")
 
 //bigQ - //search=coder&page=2&category=shortsleeves&rating[gte]=4
-//&price[lte]=999&price[gte]=199
+//&price[lte]=999&price[gte]=199&limit=5
 
 class WhereClause{
     constructor(base, bigQ){
@@ -33,7 +34,9 @@ class WhereClause{
         //convert bigQ into a string => copyQ
         let stringOfCopyQ = JSON.stringify(copyQ)
 
-        stringOfCopyQ = stringOfCopyQ.replace(/(gte|lte\gt\lt)\b/g, m => `$${m}`)
+        stringOfCopyQ = stringOfCopyQ.replace(/\b(gte|lte|gt|lt)\b/g, m => `$${m}`)
+      //stringOfCopyQ = stringOfCopyQ.replace(/                   /g, m => `$${m}`)
+
 
         const jsonOfCopyQ = JSON.parse(stringOfCopyQ)
 
